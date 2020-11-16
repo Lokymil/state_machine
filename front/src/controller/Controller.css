@@ -1,0 +1,35 @@
+.controller button {
+  margin: 0.7rem 2rem;
+  padding: 0.7rem 1rem;
+  border-radius: 50%;
+}
+
+.controller-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.y {
+  border: 1px solid #a57900;
+  background-color: #f5cf65;
+  color: #a57900;
+}
+
+.x {
+  border: 1px solid #0019a5;
+  background-color: #8e99ff;
+  color: #0019a5;
+}
+
+.b {
+  border: 1px solid #a50000;
+  background-color: #f77575;
+  color: #a50000;
+}
+
+.a {
+  border: 1px solid #00a508;
+  background-color: #90f883;
+  color: #00a508;
+}
