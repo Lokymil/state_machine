@@ -1,24 +1,33 @@
 package fr.zenika.pza.player;
 
-import fr.zenika.pza.state.Standing;
-import fr.zenika.pza.state.State;
+import fr.zenika.pza.state.attack.AttackState;
+import fr.zenika.pza.state.attack.NotAttacking;
+import fr.zenika.pza.state.horizontal.HorizontalState;
+import fr.zenika.pza.state.horizontal.Standing;
 
 public class Player {
-    private State state;
+    private HorizontalState hState;
+    private AttackState aState;
 
     public Player() {
-        this.state = new Standing(this);
+        this.hState = new Standing(this);
+        this.aState = new NotAttacking(this);
     }
 
-    public void setState(State state) {
-        this.state = state;
+    public void setState(HorizontalState hState) {
+        this.hState = hState;
+    }
+
+    public void setState(AttackState aState) {
+        this.aState = aState;
     }
 
     public void handleInput(String input) {
-        state.handleInput(input);
+        hState.handleInput(input);
+        aState.handleInput(input);
     }
 
     public String getActions() {
-        return "While " + state + ", you can:\n" + state.getActions();
+        return "While " + hState + ", "+ aState +", you can:\n" + aState.getActions() + hState.getActions() ;
     }
 }

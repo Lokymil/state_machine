@@ -13,8 +13,9 @@ public class App {
 
         String input;
         do {
+            System.out.println("----------------------------------------------------------");
             System.out.println(player.getActions());
-            System.out.println("O: Quit");
+            System.out.println("0: Quit");
             input = scanner.next();
 
             player.handleInput(input);
@@ -24,3 +25,5 @@ public class App {
         } while(true);
     }
 }
+
+// TODO Use design pattern State

@@ -1,8 +1,8 @@
-package fr.zenika.pza.state;
+package fr.zenika.pza.state.horizontal;
 
 import fr.zenika.pza.player.Player;
 
-public class WalkLeft extends State {
+public class WalkLeft extends HorizontalState {
     public WalkLeft(Player player) {
         super(player);
         this.stateName = "WALK_LEFT";
@@ -11,11 +11,11 @@ public class WalkLeft extends State {
     @Override
     public void handleInput(String input) {
         switch(input) {
-            case "1":
-                this.player.setState(new Standing(player));
+            case "X":
+                this.player.setState(new RunLeft(player));
                 break;
-            case "2":
-                System.out.println("ATTACK");
+            case "B":
+                this.player.setState(new Standing(player));
                 break;
             default:
         }
@@ -23,6 +23,6 @@ public class WalkLeft extends State {
 
     @Override
     public String getActions() {
-        return "1: Stop\n2: Attack";
+        return "X: Run left\nB: Stop\n";
     }
 }
