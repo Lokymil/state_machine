@@ -1,5 +1,11 @@
 .player {
+  width: 225px;
   margin-bottom: 1rem;
   border: 1px solid grey;
   padding: 0.5rem;
+}
+
+.current-state {
+  font-weight: bold;
+  color: rgb(199, 47, 36);
 }

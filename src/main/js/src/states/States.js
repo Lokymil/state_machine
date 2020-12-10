@@ -3,73 +3,73 @@ import Controller from "../controller/Controller";
 import Player from "../player/Player";
 
 const ground = {
-  value: "ground",
+  value: "Grounded",
   onVertChange: () => fly1,
-  onVertChangeString: "fly1",
+  onVertChangeString: "Fly1",
 };
 
 const fly1 = {
-  value: "fly1",
+  value: "Fly1",
   onVertChange: () => fly2,
-  onVertChangeString: "fly2",
+  onVertChangeString: "Fly2",
 };
 
 const fly2 = {
-  value: "fly2",
+  value: "Fly2",
   onVertChange: () => ground,
-  onVertChangeString: "ground",
+  onVertChangeString: "Grounded",
 };
 
 const no_move = {
-  value: "static",
+  value: "Standing",
   onLeft: () => left,
-  onLeftString: "left",
+  onLeftString: "Walk left",
   onRight: () => right,
-  onRightString: "right",
+  onRightString: "Walk right",
 };
 
 const left = {
-  value: "left",
+  value: "Walk left",
   onLeft: () => left_rush,
-  onLeftString: "left rush",
+  onLeftString: "Run left",
   onRight: () => no_move,
-  onRightString: "static",
+  onRightString: "Stop",
 };
 
 const right = {
-  value: "right",
+  value: "Walk right",
   onLeft: () => no_move,
-  onLeftString: "static",
+  onLeftString: "Stop",
   onRight: () => right_rush,
-  onRightString: "right rush",
+  onRightString: "Run right",
 };
 
 const left_rush = {
-  value: "left rush",
+  value: "Run left",
   onLeft: () => left_rush,
-  onLeftString: "left rush",
+  onLeftString: "Run left",
   onRight: () => left,
-  onRightString: "left",
+  onRightString: "Walk left",
 };
 
 const right_rush = {
-  value: "right rush",
+  value: "Run right",
   onLeft: () => right,
-  onLeftString: "right",
+  onLeftString: "Walk right",
   onRight: () => right_rush,
-  onRightString: "right rush",
+  onRightString: "Run right",
 };
 
 const atk = {
   value: true,
   onAtk: () => notAtk,
-  onAtkString: "stop atk",
+  onAtkString: "Stop attack",
 };
 
 const notAtk = {
   value: false,
   onAtk: () => atk,
-  onAtkString: "atk",
+  onAtkString: "Attack",
 };
 
 function States() {

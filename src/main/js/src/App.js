@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Ifs from "./ifs/Ifs";
 import States from "./states/States";
+import "./App.css";
 
 function App() {
   const [mode, setMode] = useState("if");
@@ -9,8 +10,20 @@ function App() {
     <div>
       <div>
         Choix du mode :
-        <button onClick={() => setMode("if")}>Forêt de if</button>
-        <button onClick={() => setMode("state")}>Machine à état</button>
+        <div className="button-group">
+          <button
+            className={mode === "if" ? "button-active" : ""}
+            onClick={() => setMode("if")}
+          >
+            Forêt de if
+          </button>
+          <button
+            className={mode === "state" ? "button-active" : ""}
+            onClick={() => setMode("state")}
+          >
+            Machine à état
+          </button>
+        </div>
       </div>
       <div>
         {mode === "if" && <Ifs />}
