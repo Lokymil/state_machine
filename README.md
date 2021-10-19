@@ -6,8 +6,9 @@ Le but n'est pas de faire du code de qualité ni d'utiliser les design patterns 
 
 Pour plus d'informations, vous pouvez consulter cette [documentation](https://en.wikipedia.org/wiki/State_pattern).
 
-Ce repo est constitué de 2 projets :
+Ce repo est constitué de 3 projets :
 
+- LIVE : résultat de l'exécutable JS fait en live coding
 - UI : interface graphique en JS
 - POO : CLI en Java
 
@@ -31,6 +32,31 @@ Pour exécuter l'application en Programmation Orientée Objet, il est nécessair
 - [Java 8](https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot)
 - [Maven 3](https://maven.apache.org/download.cgi)
 
+## LIVE
+
+### Technos
+
+Le code se trouve dans le dossier `src/main/live`.
+
+Etant un exécutable Node, **il faut que Node 14 (ou plus) soit installé.**
+
+### Contenu
+
+Ce programme a pour vocation de proposer une implémentation basique mais complète d'une machine à 2 états.
+Il représente le code final qui devrait avoir été atteint lors du live coding.
+
+Ici, la machine à état est créée à partir d'une configuration fixe pour généré un objet capable de réagir aux événements et de ne transitionner d'état quand lorsque l'événement reçu est reconnu.
+
+Y est également présent le fichier "starter" contenant le point de départ du live code.
+
+### Lancer l'application
+
+Exécuter la commande :
+
+```sh
+make live
+```
+
 ## UI
 
 ### Technos
@@ -41,7 +67,7 @@ Etant une application React, **il faut que Node 14 (ou plus) soit installé.**
 
 ### Contenu
 
-Cette partie a pour vocation de présenter de manière graphique le comportement d'une machine à état basique tel qu'on pourrait le retrouver dans un jeu vidéo
+Ce programme a pour vocation de présenter de manière graphique le comportement d'une machine à état basique tel qu'on pourrait le retrouver dans un jeu vidéo
 pour gérer les inputs utilisateur au travers d'une manette.
 
 Ici, le code représente un version "simplifiée" de la machine à état. Les transitions n'ont pas de `onEnter`, de `onExit` ou d'action spécifique. Aussi, on se base sur des `Object` (au sens JS du terme) que l'on crée à la volée pour passer d'un état à un autre plutot de change de valeur.
@@ -57,7 +83,7 @@ L'objectif de ces deux "versions" est de mettre en évidence la modularité et l
 
 ### Lancer l'application
 
-Exécuter la commandes :
+Exécuter la commande :
 
 ```sh
 # Première fois
@@ -79,23 +105,26 @@ Etant une application Java, **il faut que Java 8 et Maven 3 soit installé.**
 
 ### Contenu
 
-Cette partie a pour vocation de présenter sous la forme d'une CLI le comportement d'une machine à état basique tel qu'on pourrait le retrouver dans un jeu vidéo
+Ce programme a pour vocation de présenter sous la forme d'une CLI le comportement d'une machine à état basique tel qu'on pourrait le retrouver dans un jeu vidéo
 pour gérer les inputs utilisateur au travers d'une manette.
 
-Dans cette partie, le code représente un version "simplifiée" de la machine à état. Les transitions n'ont pas de `onEnter`, de `onExit` ou d'action spécifique. Aussi, on se base sur des `Class` que l'on instantie à la volée pour passer d'un état à un autre plutot de change de valeur.
+Dans ce programme, le code représente un version "simplifiée" de la machine à état. Les transitions n'ont pas de `onEnter`, de `onExit` ou d'action spécifique. Aussi, on se base sur des `Class` que l'on instantie à la volée pour passer d'un état à un autre plutot de change de valeur.
 
-Cette partie à pour vocation de présenter la même machine en utilisant de la Programmation Orientée Objet.
-L'objectif est de rendre le code accessible au plus grand nombre.
+Ici, la même machine est développée en Programmation Orientée Objet pour rendre le code accessible au plus grand nombre.
 
 ### Lancer l'application
 
-Exécuter la commandes :
+Exécuter la commande :
 
 ```sh
 make poo
 ```
 
 ## Scripts
+
+### `make live`
+
+Lance l'exécutable LIVE.
 
 ### `make poo-install`
 

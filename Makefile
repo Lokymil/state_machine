@@ -1,32 +1,36 @@
+live:
+	@echo "Starting LIVE script"
+	node src/main/live/index.js
+
 poo-install:
-	echo "Installing and building POO app"
+	@echo "Installing and building POO app"
 	mvn clean install
 
 poo-start: poo-build
-	echo "Starting POO app"
+	@echo "Starting POO app"
 	java -jar ./target/state-machine-1.jar
 
 poo: poo-build poo-start
 
 poo-clean:
-	echo "POO: cleaning ..."
+	@echo "POO: cleaning ..."
 	mvn clean
 	rm -r ./target
-	echo "POO: cleaned !"
+	@echo "POO: cleaned !"
 
 ui-install:
-	echo "Installing UI app"
+	@echo "Installing UI app"
 	npm install --prefix src/main/ui
 
 ui-start: ui-install
-	echo "Starting UI app"
+	@echo "Starting UI app"
 	npm start --prefix src/main/ui
 
 ui: ui-install ui-start
 
 ui-clean:
-	echo "UI: cleaning ..."
+	@echo "UI: cleaning ..."
 	rm -r ./src/main/ui/node_modules
-	echo "UI: cleaned !"
+	@echo "UI: cleaned !"
 
 clean: poo-clean ui-clean
