@@ -1,6 +1,6 @@
-package fr.zenika.pza.state.horizontal;
+package fr.lokymil.talk.state.horizontal;
 
-import fr.zenika.pza.player.Player;
+import fr.lokymil.talk.player.Player;
 
 public class WalkRight extends HorizontalState {
     public WalkRight(Player player) {

@@ -1,6 +1,6 @@
-package fr.zenika.pza;
+package fr.lokymil.talk;
 
-import fr.zenika.pza.player.Player;
+import fr.lokymil.talk.player.Player;
 
 import java.util.Scanner;
 

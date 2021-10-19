@@ -1,6 +1,6 @@
-package fr.zenika.pza.state;
+package fr.lokymil.talk.state;
 
-import fr.zenika.pza.player.Player;
+import fr.lokymil.talk.player.Player;
 
 public abstract class State {
     protected Player player;

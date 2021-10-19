@@ -1,9 +1,9 @@
-package fr.zenika.pza.player;
+package fr.lokymil.talk.player;
 
-import fr.zenika.pza.state.attack.AttackState;
-import fr.zenika.pza.state.attack.NotAttacking;
-import fr.zenika.pza.state.horizontal.HorizontalState;
-import fr.zenika.pza.state.horizontal.Standing;
+import fr.lokymil.talk.state.attack.AttackState;
+import fr.lokymil.talk.state.attack.NotAttacking;
+import fr.lokymil.talk.state.horizontal.HorizontalState;
+import fr.lokymil.talk.state.horizontal.Standing;
 
 public class Player {
     private HorizontalState hState;

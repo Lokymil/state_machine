@@ -1,6 +1,6 @@
-package fr.zenika.pza.state.attack;
+package fr.lokymil.talk.state.attack;
 
-import fr.zenika.pza.player.Player;
+import fr.lokymil.talk.player.Player;
 
 public class Attacking extends AttackState {
     public Attacking(Player player) {

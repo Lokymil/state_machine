@@ -1,6 +1,6 @@
-package fr.zenika.pza.state.horizontal;
+package fr.lokymil.talk.state.horizontal;
 
-import fr.zenika.pza.player.Player;
+import fr.lokymil.talk.player.Player;
 
 public class Standing extends HorizontalState {
     public Standing(Player player) {
