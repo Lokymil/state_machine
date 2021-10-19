@@ -1,14 +1,37 @@
 # Talk sur les machines à état
 
-Talk de 30 min effectué pour présenter le principe des machines à état.
+Talk pour présenter le principe des machines à état.
 
 Le but n'est pas de faire du code de qualité ni d'utiliser les design patterns mais de saisir le principe.
 
 Pour plus d'informations, vous pouvez consulter cette [documentation](https://en.wikipedia.org/wiki/State_pattern).
 
----
+Ce repo est constitué de 2 projets :
 
-## Visuel
+- UI : interface graphique en JS
+- POO : CLI en Java
+
+## Installation
+
+### Général
+
+Les scripts pour installer les dépendances, build les applications et lancer les applications
+utilise tous `Make`. Il est donc nécéssaire d'installer `Make`.
+
+### Visuel
+
+Pour exécuter l'application visuel, il est nécessaire d'installer :
+
+- [Node](https://nodejs.org/en/download/) >= 14.
+
+### POO
+
+Pour exécuter l'application en Programmation Orientée Objet, il est nécessaire d'installer :
+
+- [Java 8](https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot)
+- [Maven 3](https://maven.apache.org/download.cgi)
+
+## UI
 
 ### Technos
 
@@ -34,14 +57,17 @@ L'objectif de ces deux "versions" est de mettre en évidence la modularité et l
 
 ### Lancer l'application
 
-Exécuter les commandes :
+Exécuter la commandes :
 
-```
-npm install --prefix src/main/ui
-npm start --prefix src/main/ui
-```
+```sh
+# Première fois
+make ui
 
----
+#
+
+# Fois suivantes (pour aller plus vite)
+make ui-start
+```
 
 ## POO
 
@@ -63,9 +89,52 @@ L'objectif est de rendre le code accessible au plus grand nombre.
 
 ### Lancer l'application
 
-Exécuter les commandes :
+Exécuter la commandes :
 
+```sh
+make poo
 ```
-mvn clean install
-java -jar ./target/state-machine-{version}.jar
-```
+
+## Scripts
+
+### `make poo-install`
+
+Installe et build l'application POO.
+
+### `make poo-start`
+
+Démarre l'application POO. `make poo-install` doit être fait avant pour le premier lancement ou pour prendre en compte les dernières modifications.
+
+### `make poo`
+
+Installe et build l'application POO puis la démarre.
+
+### `make poo-clean`
+
+Supprime l'ensemble des fichiers générés par l'application POO.
+
+### `make ui-install`
+
+Installe les dépendances pour l'application UI.
+
+### `make ui-start`
+
+Démarre l'application UI.
+`make ui-install` doit être fait avant pour le premier lancement.
+
+### `make ui`
+
+Installe les dépendances pour l'application UI et la démarre.
+
+### `make ui-clean`
+
+Supprime les fichiers par l'application UI.
+
+### `make clean`
+
+Supprime l'ensemble des fichiers générés.
+
+## Sources
+
+- [Wikipedia, state pattern](https://en.wikipedia.org/wiki/State_pattern)
+- [Kent C. Dodds](https://kentcdodds.com/blog/implementing-a-simple-state-machine-library-in-javascript)
