@@ -17,8 +17,8 @@ visuelle diffère également afin de mettre en évidence l'écart d'implémentat
 Lancer le projet :
 
 ```
-npm install --prefix src/main/js
-npm start --prefix src/main/js
+npm install --prefix src/main/ui
+npm start --prefix src/main/ui
 ```
 
 ## Livecode (java)
