@@ -19,7 +19,7 @@ Ce repo est constitué de 3 projets :
 Les scripts pour installer les dépendances, build les applications et lancer les applications
 utilise tous `Make`. Il est donc nécéssaire d'installer `Make`.
 
-### Visuel
+### LIVE & UI
 
 Pour exécuter l'application visuel, il est nécessaire d'installer :
 
@@ -34,15 +34,15 @@ Pour exécuter l'application en Programmation Orientée Objet, il est nécessair
 
 ## LIVE
 
-### Technos
-
 Le code se trouve dans le dossier `src/main/live`.
+
+### Prérequis
 
 Etant un exécutable Node, **il faut que Node 14 (ou plus) soit installé.**
 
 ### Contenu
 
-Ce programme a pour vocation de proposer une implémentation basique mais complète d'une machine à 2 états et de la fonction génératrice.
+Ce programme a pour vocation de proposer une implémentation basique mais complète d'une machine à 2 états et de sa fonction génératrice.
 Il représente le code final qui devrait avoir été atteint lors du live coding.
 
 Ici, la machine à état est créée à partir d'une configuration fixe pour généré un objet capable de réagir aux événements et de ne transitionner d'état quand lorsque l'événement reçu est reconnu.
@@ -61,9 +61,9 @@ make live
 
 ## UI
 
-### Technos
-
 Le code se trouve dans le dossier `src/main/ui`.
+
+### Prérequis
 
 Etant une application React, **il faut que Node 14 (ou plus) soit installé.**
 
@@ -91,17 +91,15 @@ Exécuter la commande :
 # Première fois
 make ui
 
-#
-
 # Fois suivantes (pour aller plus vite)
 make ui-start
 ```
 
 ## POO
 
-### Technos
-
 Le code se trouve dans le dossier `src/main/java`.
+
+### Prérequis
 
 Etant une application Java, **il faut que Java 8 et Maven 3 soit installé.**
 
@@ -110,9 +108,9 @@ Etant une application Java, **il faut que Java 8 et Maven 3 soit installé.**
 Ce programme a pour vocation de présenter sous la forme d'une CLI le comportement d'une machine à état basique tel qu'on pourrait le retrouver dans un jeu vidéo
 pour gérer les inputs utilisateur au travers d'une manette.
 
-Dans ce programme, le code représente un version "simplifiée" de la machine à état. Les transitions n'ont pas de `onEnter`, de `onExit` ou d'action spécifique. Aussi, on se base sur des `Class` que l'on instantie à la volée pour passer d'un état à un autre plutot de change de valeur.
+Dans ce programme, le code représente un version "simplifiée" de la machine à état. Les transitions n'ont pas de `onEnter`, de `onExit` ou d'action spécifique.
 
-Ici, la même machine est développée en Programmation Orientée Objet pour rendre le code accessible au plus grand nombre.
+Ici, la même machine que pour dans le code UI est développée en Programmation Orientée Objet (Java) pour rendre le code accessible au plus grand nombre.
 
 ### Lancer l'application
 
@@ -126,7 +124,7 @@ make poo
 
 ### `make live`
 
-Lance l'exécutable LIVE.
+Lance l'exécutable utilisé comme référence lors du Live Coding.
 
 ### `make poo-install`
 
