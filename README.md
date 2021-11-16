@@ -2,15 +2,15 @@
 
 Talk pour présenter le principe des machines à état.
 
-Le but n'est pas de faire du code de qualité ni d'utiliser les design patterns mais de saisir le principe.
+Le but n'est pas de faire du code de qualité ni d'utiliser dans les règles de l'art le design pattern "State" mais d'en saisir le principe.
 
 Pour plus d'informations, vous pouvez consulter cette [documentation](https://en.wikipedia.org/wiki/State_pattern).
 
 Ce repo est constitué de 3 projets :
 
-- LIVE : résultat de l'exécutable JS fait en live coding
-- UI : interface graphique en JS
-- POO : CLI en Java
+- [LIVE](#live) : résultat de l'exécutable JS fait en live coding
+- [UI](#ui) : interface graphique en JS
+- [POO](#poo) : CLI en Java
 
 ## Installation
 
