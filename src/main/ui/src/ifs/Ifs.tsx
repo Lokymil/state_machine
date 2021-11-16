@@ -4,9 +4,9 @@ import Player from "../player/Player";
 import "./Ifs.css";
 
 function Ifs() {
-  const [vert, setVert] = useState("Grounded");
-  const [horz, setHorz] = useState("Standing");
-  const [atk, setAtk] = useState(false);
+  const [vert, setVert] = useState<string>("Grounded");
+  const [horz, setHorz] = useState<string>("Standing");
+  const [atk, setAtk] = useState<boolean>(false);
 
   const onAClick = () => {
     if (vert === "Grounded") {

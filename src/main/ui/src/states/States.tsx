@@ -1,81 +1,19 @@
 import React, { useState } from "react";
 import Controller from "../controller/Controller";
 import Player from "../player/Player";
-
-const ground = {
-  value: "Grounded",
-  onVertChange: () => fly1,
-  onVertChangeString: "Fly1",
-};
-
-const fly1 = {
-  value: "Fly1",
-  onVertChange: () => fly2,
-  onVertChangeString: "Fly2",
-};
-
-const fly2 = {
-  value: "Fly2",
-  onVertChange: () => ground,
-  onVertChangeString: "Grounded",
-};
-
-const no_move = {
-  value: "Standing",
-  onLeft: () => left,
-  onLeftString: "Walk left",
-  onRight: () => right,
-  onRightString: "Walk right",
-};
-
-const left = {
-  value: "Walk left",
-  onLeft: () => left_rush,
-  onLeftString: "Run left",
-  onRight: () => no_move,
-  onRightString: "Stop",
-};
-
-const right = {
-  value: "Walk right",
-  onLeft: () => no_move,
-  onLeftString: "Stop",
-  onRight: () => right_rush,
-  onRightString: "Run right",
-};
-
-const left_rush = {
-  value: "Run left",
-  onLeft: () => left_rush,
-  onLeftString: "Run left",
-  onRight: () => left,
-  onRightString: "Walk left",
-};
-
-const right_rush = {
-  value: "Run right",
-  onLeft: () => right,
-  onLeftString: "Walk right",
-  onRight: () => right_rush,
-  onRightString: "Run right",
-};
-
-const atk = {
-  value: true,
-  onAtk: () => notAtk,
-  onAtkString: "Stop attack",
-};
-
-const notAtk = {
-  value: false,
-  onAtk: () => atk,
-  onAtkString: "Attack",
-};
+import {
+  ground,
+  no_move,
+  notAtk,
+  VerticalPlayerState,
+  HorizontalPlayerState,
+  AttackingPlayerState,
+} from "./playerStates";
 
 function States() {
-  const [vertState, setVertState] = useState(ground);
-  const [horzState, setHorzState] = useState(no_move);
-  const [atkState, setAtkState] = useState(notAtk);
+  const [vertState, setVertState] = useState<VerticalPlayerState>(ground);
+  const [horzState, setHorzState] = useState<HorizontalPlayerState>(no_move);
+  const [atkState, setAtkState] = useState<AttackingPlayerState>(notAtk);
 
   const handleYClick = () => {
     setAtkState(atkState.onAtk());
