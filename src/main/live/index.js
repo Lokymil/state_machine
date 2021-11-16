@@ -1,8 +1,8 @@
-function createMachine(config) {
+function createMachine(stateMachineDefinition) {
   const machine = {
-    value: config.initialState,
+    value: stateMachineDefinition.initialState,
     transition(event) {
-      const currentStateDefinition = config[machine.value];
+      const currentStateDefinition = stateMachineDefinition[machine.value];
       const destinationTransition = currentStateDefinition.transitions[event];
 
       if (!destinationTransition) {
@@ -10,7 +10,8 @@ function createMachine(config) {
       }
 
       const destinationState = destinationTransition.target;
-      const destinationStateDefinition = config[destinationState];
+      const destinationStateDefinition =
+        stateMachineDefinition[destinationState];
 
       destinationTransition.action();
       currentStateDefinition.actions.onExit();
@@ -67,12 +68,12 @@ const machine = createMachine({
 
 // What we want to do with our state machine
 let state = machine.value;
-console.log(`Current state: ${state}`); // Current state: off
+console.log(`\nCurrent state: ${state}\n`); // Current state: off
 
 console.log("--- Trigger switch ---");
 state = machine.transition("switch");
-console.log(`Current state: ${state}`); // Current state: on
+console.log(`\nCurrent state: ${state}\n`); // Current state: on
 
 console.log("--- Trigger switch ---");
 state = machine.transition("switch");
-console.log(`Current state: ${state}`); // Current state: off
+console.log(`\nCurrent state: ${state}\n`); // Current state: off

@@ -1,5 +1,9 @@
 live:
-	@echo "Starting LIVE script"
+	@echo "Starting valid LIVE script"
+	node src/main/live/liveCodingStarterPoint.js
+
+live-valid:
+	@echo "Starting valid LIVE script"
 	node src/main/live/index.js
 
 poo-install:

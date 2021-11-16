@@ -15,10 +15,12 @@ A transition can define actions that occur when the transition happens. Actions 
 
 // What we want to do with our state machine
 let state = machine.value;
-console.log(`current state: ${state}`); // current state: off
+console.log(`\nCurrent state: ${state}\n`); // Current state: off
 
-state = machine.transition(state, "switch");
-console.log(`current state: ${state}`); // current state: on
+console.log("--- Trigger switch ---");
+state = machine.transition("switch");
+console.log(`\nCurrent state: ${state}\n`); // Current state: on
 
-state = machine.transition(state, "switch");
-console.log(`current state: ${state}`); // current state: off
+console.log("--- Trigger switch ---");
+state = machine.transition("switch");
+console.log(`\nCurrent state: ${state}\n`); // Current state: off
