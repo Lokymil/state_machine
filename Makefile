@@ -6,11 +6,11 @@ poo-install:
 	@echo "Installing and building POO app"
 	mvn clean install
 
-poo-start: poo-build
+poo-start: poo-install
 	@echo "Starting POO app"
 	java -jar ./target/state-machine-1.jar
 
-poo: poo-build poo-start
+poo: poo-install poo-start
 
 poo-clean:
 	@echo "POO: cleaning ..."
