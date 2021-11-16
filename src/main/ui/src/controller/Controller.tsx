@@ -1,7 +1,19 @@
 import React from "react";
 import "./Controller.css";
 
-function Controller({ onAClick, onXClick, onYClick, onBClick }) {
+type ControllerProps = {
+  onAClick: () => void;
+  onXClick: () => void;
+  onYClick: () => void;
+  onBClick: () => void;
+};
+
+function Controller({
+  onAClick,
+  onXClick,
+  onYClick,
+  onBClick,
+}: ControllerProps) {
   return (
     <div className="controller">
       <div className="controller-line">

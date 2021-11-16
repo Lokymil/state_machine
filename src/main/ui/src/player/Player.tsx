@@ -1,18 +1,24 @@
 import React from "react";
 import "./Player.css";
 
-function Player({ vert, horz, atk }) {
+type PlayerProps = {
+  vert: string;
+  horz: string;
+  atk: boolean;
+};
+
+function Player({ vert, horz, atk }: PlayerProps) {
   return (
     <div className="player">
       <div>Etat du joueur :</div>
       <div>
-        > Vertical : <span className="current-state">{vert}</span>
+        &gt; Vertical : <span className="current-state">{vert}</span>
       </div>
       <div>
-        > Horizontal : <span className="current-state">{horz}</span>
+        &gt; Horizontal : <span className="current-state">{horz}</span>
       </div>
       <div>
-        > Attaque :{" "}
+        &gt; Attaque :{" "}
         <span className="current-state">
           {atk ? "Attacking" : "Not attacking"}
         </span>
