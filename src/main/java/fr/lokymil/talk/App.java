@@ -23,6 +23,8 @@ public class App {
                 break;
             }
         } while(true);
+
+        scanner.close();
     }
 }
 
