@@ -42,12 +42,14 @@ Etant un exécutable Node, **il faut que Node 14 (ou plus) soit installé.**
 
 ### Contenu
 
-Ce programme a pour vocation de proposer une implémentation basique mais complète d'une machine à 2 états.
+Ce programme a pour vocation de proposer une implémentation basique mais complète d'une machine à 2 états et de la fonction génératrice.
 Il représente le code final qui devrait avoir été atteint lors du live coding.
 
 Ici, la machine à état est créée à partir d'une configuration fixe pour généré un objet capable de réagir aux événements et de ne transitionner d'état quand lorsque l'événement reçu est reconnu.
 
 Y est également présent le fichier "starter" contenant le point de départ du live code.
+
+Cette partie est largement inspirée de la [vidéo](https://kentcdodds.com/blog/implementing-a-simple-state-machine-library-in-javascript) faite par Kent C. Dodds.
 
 ### Lancer l'application
 
