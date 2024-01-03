@@ -1,7 +1,9 @@
 .controller button {
+  width: 4rem;
+  height: 4rem;
   margin: 0.7rem 2rem;
-  padding: 0.7rem 1rem;
   border-radius: 50%;
+  font-weight: bolder;
 }
 
 .controller-line {
@@ -12,24 +14,24 @@
 
 .y {
   border: 1px solid #a57900;
-  background-color: #f5cf65;
+  background-color: #ffe49c;
   color: #a57900;
 }
 
 .x {
   border: 1px solid #0019a5;
-  background-color: #8e99ff;
+  background-color: #a3acfd;
   color: #0019a5;
 }
 
 .b {
   border: 1px solid #a50000;
-  background-color: #f77575;
+  background-color: #f58d8d;
   color: #a50000;
 }
 
 .a {
   border: 1px solid #00a508;
-  background-color: #90f883;
+  background-color: #bbfcb2;
   color: #00a508;
 }

@@ -11,18 +11,20 @@ function Player({ vert, horz, atk }: PlayerProps) {
   return (
     <div className="player">
       <div>Etat du joueur :</div>
-      <div>
-        &gt; Vertical : <span className="current-state">{vert}</span>
-      </div>
-      <div>
-        &gt; Horizontal : <span className="current-state">{horz}</span>
-      </div>
-      <div>
-        &gt; Attaque :{" "}
-        <span className="current-state">
-          {atk ? "Attacking" : "Not attacking"}
-        </span>
-      </div>
+      <ul>
+        <li className="state">
+          Vertical : <span className="current-state">{vert}</span>
+        </li>
+        <li className="state">
+          Horizontal : <span className="current-state">{horz}</span>
+        </li>
+        <li className="state">
+          Attaque :{" "}
+          <span className="current-state">
+            {atk ? "Attacking" : "Not attacking"}
+          </span>
+        </li>
+      </ul>
     </div>
   );
 }

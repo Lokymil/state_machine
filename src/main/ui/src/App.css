@@ -1,5 +1,6 @@
 body {
   background-color: #efefef;
+  font-size: 24px;
 }
 
 .button-group > * {
@@ -21,6 +22,7 @@ body {
 button {
   padding: 10px;
   background-color: white;
+  font-size: 1rem;
 }
 
 .button-active {

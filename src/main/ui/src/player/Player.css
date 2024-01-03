@@ -1,8 +1,12 @@
 .player {
-  width: 225px;
+  width: 300px;
   margin-bottom: 1rem;
   border: 1px solid grey;
   padding: 0.5rem;
+}
+
+.state {
+  margin: 0.5rem 0;
 }
 
 .current-state {
